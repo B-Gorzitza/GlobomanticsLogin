@@ -29,11 +29,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     override fun onClick(p0: View?) =
-        if (loginVerification.verifyEmailAndPassword(
-                email.text.toString(),
-                password.text.toString()
-            )
-        ) {
+        if (loginVerification.verifyCredentials(email.text.toString(), password.text.toString())) {
             Toast.makeText(this, "Login succeeded", Toast.LENGTH_SHORT).show()
         } else {
             Toast.makeText(this, "Login failed", Toast.LENGTH_SHORT).show()
