@@ -15,17 +15,17 @@ class ExampleUnitTest {
 
     @Test
     fun loginSuccessfulWhenCredentialsCorrect() {
-        assertTrue(verification.verify("test@globomatics.com", "test123"))
+        assertTrue(verification.verifyEmailAndPassword("test@globomatics.com", "test123"))
     }
 
     @Test
     fun loginFailsWhenWrongEmail() {
-        assertFalse(verification.verify("test@test.com", "test123"))
+        assertFalse(verification.verifyEmailAndPassword("test@test.com", "test123"))
     }
 
     @Test
     fun loginFailsWhenWrongPassword() {
-        assertFalse(verification.verify("test@globomatics.com", "test12"))
+        assertFalse(verification.verifyEmailAndPassword("test@globomatics.com", "test12"))
     }
 
     @Test
