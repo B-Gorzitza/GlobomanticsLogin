@@ -1,7 +1,6 @@
 package fiveninesreliable.gmail.com.globomanticslogin
 
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
@@ -31,10 +30,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     override fun onClick(p0: View?) =
         if (loginVerification.verify(email.text.toString(), password.text.toString())) {
-            Log.d("Login succeeded", password.text.toString())
             Toast.makeText(this, "Login succeeded", Toast.LENGTH_SHORT).show()
         } else {
-            Log.d("Login FAILED", password.text.toString())
             Toast.makeText(this, "Login failed", Toast.LENGTH_SHORT).show()
         }
 }
