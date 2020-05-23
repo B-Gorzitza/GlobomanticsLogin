@@ -1,0 +1,3 @@
+rootProject.name='Globomantics Login'
+include ':app'
+include ':loginverification'
