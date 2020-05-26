@@ -5,6 +5,6 @@ class LoginVerification {
         return (email == "test@globomatics.com" &&
                 password == "test123") ||
                 (email == "admin@globomatics.com" &&
-                        password == "admin123")
+                        password == "admin1234")
     }
 }
